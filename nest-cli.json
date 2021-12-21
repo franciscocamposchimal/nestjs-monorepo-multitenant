@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/multitenant/src",
+  "monorepo": true,
+  "root": "apps/multitenant",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/multitenant/tsconfig.app.json"
+  },
+  "projects": {
+    "multitenant": {
+      "type": "application",
+      "root": "apps/multitenant",
+      "entryFile": "main",
+      "sourceRoot": "apps/multitenant/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/multitenant/tsconfig.app.json"
+      }
+    },
+    "app-base": {
+      "type": "application",
+      "root": "apps/app-base",
+      "entryFile": "main",
+      "sourceRoot": "apps/app-base/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/app-base/tsconfig.app.json"
+      }
+    }
+  }
+}
